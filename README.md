@@ -1,1 +1,0 @@
-# one_night_academic_resource
