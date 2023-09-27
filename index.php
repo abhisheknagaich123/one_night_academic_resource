@@ -68,7 +68,7 @@
 
 
 <!-- Navbar Start -->
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row border-top px-xl-5">
         <div class="col-lg-3 d-none d-lg-block">
             <a class="d-flex align-items-center justify-content-between bg-secondary w-100 text-decoration-none" data-toggle="collapse" href="#navbar-vertical" style="height: 67px; padding: 0 30px;">
@@ -120,7 +120,7 @@
             </nav>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Navbar End -->
 
 
