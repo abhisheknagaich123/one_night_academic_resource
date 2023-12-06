@@ -411,7 +411,7 @@
             <div class="col-md-6 col-lg-3 text-center team mb-4">
                 <div class="team-item rounded overflow-hidden mb-2">
                     <div class="team-img position-relative">
-                        <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        <img class="img-fluid" src="img/team-4.jpg" alt="">
                         <div class="team-social">
                             <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -427,7 +427,7 @@
             <div class="col-md-6 col-lg-3 text-center team mb-4">
                 <div class="team-item rounded overflow-hidden mb-2">
                     <div class="team-img position-relative">
-                        <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        <img class="img-fluid" src="img/team-2.jpg" alt="">
                         <div class="team-social">
                             <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
