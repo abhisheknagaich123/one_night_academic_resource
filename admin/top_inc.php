@@ -35,12 +35,8 @@ require('function.php');
                   <li class="menu-item-has-children dropdown">
                      <a href="Subject_Info.php" > Add Subject Data </a>
                   </li>
-                  <li class="menu-item-has-children dropdown">
-                     <a href="User.php" > User Data</a>
-                  </li>
-                  <li class="menu-item-has-children dropdown">
-                     <a href="AddSubjectCategories.php" > Add Subjects</a>
-                  </li>
+                 
+                  
               
               
                </ul>

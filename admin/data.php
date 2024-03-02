@@ -1,14 +1,14 @@
 <?php
 require('connection.php');
 require('function.php');
-if (isset($_GET['type']) && $_GET['type'] != ''){
+if (isset($_GET['type']) && $_GET['type'] != '') {
     $type = get_safe_value($con, $_GET['type']);
     $id = get_safe_value($con, $_GET['id']);
     if ($type == 'info') {
-       
-         $id; // Check if the ID is being captured correctly
 
-         
+        $id; // Check if the ID is being captured correctly
+
+
         $sql = "SELECT subject_info.*, categories.categories 
         FROM subject_info 
         JOIN categories ON subject_info.categories_id = categories.id 
@@ -18,8 +18,8 @@ if (isset($_GET['type']) && $_GET['type'] != ''){
 
 
 
-     }
- }
+    }
+}
 ?>
 
 <!doctype html>
@@ -41,34 +41,44 @@ if (isset($_GET['type']) && $_GET['type'] != ''){
     <?php
 
     while ($row = mysqli_fetch_assoc($res)) { ?>
-<section class="dark">
-        <div class="container py-4">
-            <h1 class="h1 text-center" id="pageHeaderTitle"><?php echo $row['categories']?> </h1>
+        <section class="dark">
+            <div class="container py-4">
+                <h1 class="h1 text-center" id="pageHeaderTitle">
+                    <?php echo $row['categories'] ?>
+                </h1>
 
-            <article class="postcard dark blue">
+                <article class="postcard dark blue">
 
-                <div class="postcard__text">
-                    <h1 class="postcard__title blue"><a href="#"><?php echo $row['heading']?></a></h1>
-                    <div class="postcard__subtitle small">
-                        <time datetime="2020-05-25 12:00:00">
-                            <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-                        </time>
+                    <div class="postcard__text">
+                        <h1 class="postcard__title blue"><a href="#">
+                                <?php echo $row['heading'] ?>
+                            </a></h1>
+                        <div class="postcard__subtitle small">
+                            <time datetime="2020-05-25 12:00:00">
+                                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                            </time>
+                        </div>
+                        <div class="postcard__bar"></div>
+                        <div class="postcard__preview-txt">
+                            <?php echo $row['description'] ?>
+                        </div>
+                        <ul class="postcard__tagbox">
+
+                        <li class="tag__item">
+    <?php echo "<span class='fas fa-tag mr-2 badge badge-danger'><a href='?type=delete&id=" . $row['id'] . "'>Delete</a></span>"; ?>
+</li>
+<li class="tag__item">
+    <?php echo "<span class='fas fa-tag mr-2 badge badge-waring'><a href='?type=delete&id=" . $row['id'] . "'>Edit</a></span>"; ?>
+</li>
+
+                           
+                        </ul>
                     </div>
-                    <div class="postcard__bar"></div>
-                    <div class="postcard__preview-txt"><?php echo $row['description']?></div>
-                    <ul class="postcard__tagbox">
-                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
-                        <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-                        <li class="tag__item play blue">
-                            <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
-                        </li>
-                    </ul>
-                </div>
-            </article>
+                </article>
 
-        </div>
-    </section>
-        
+            </div>
+        </section>
+
     <?php } ?>
 
 

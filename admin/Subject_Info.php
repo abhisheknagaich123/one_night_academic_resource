@@ -37,10 +37,10 @@ $res = mysqli_query($con, $sql);
 				<div class="card">
 					<div class="card-body">
 						<form method="get" action="data.php">
-						<h4 class="box-title">Subject </h4>
-						<h4 class="box-link"><a href="manage_subject_data.php">Add Subject</a> </h4>
-					  </div>
-					   <div class="card-body--">
+							<h4 class="box-title">Subject </h4>
+							<h4 class="box-link"><a href="manage_subject_data.php">Add Subject</a> </h4>
+					</div>
+					<div class="card-body--">
 						<div class="table-stats order-table ov-h">
 							<table class="table ">
 								<thead>
@@ -67,8 +67,9 @@ $res = mysqli_query($con, $sql);
 											</td>
 
 											<td>
-												<?php echo "<span class='btn btn-outline-primary'><a href='data.php?type=info&id=" . $row['categories_id'] . "'><strong style='font-size: 1.2em;'>" . $row['categories'] . "</strong></a></span>"; ?>
+												<?php echo "<span class='btn btn-outline-primary'><a href='data.php?type=info&id=" . $row['categories_id'] . "' target='_blank'><strong style='font-size: 1.2em;'>" . $row['categories'] . "</strong></a></span>"; ?>
 											</td>
+
 
 
 											<td>
@@ -82,7 +83,7 @@ $res = mysqli_query($con, $sql);
 								</tbody>
 							</table>
 						</div>
-				       </from>
+						</from>
 					</div>
 				</div>
 			</div>
