@@ -8,6 +8,7 @@ if (isset($_GET['type']) && $_GET['type'] != ''){
        
          $id; // Check if the ID is being captured correctly
 
+         
         $sql = "SELECT subject_info.*, categories.categories 
         FROM subject_info 
         JOIN categories ON subject_info.categories_id = categories.id 
