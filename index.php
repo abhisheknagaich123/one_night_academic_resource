@@ -159,5 +159,4 @@ $res = mysqli_query($con, $sql);
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>
