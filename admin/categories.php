@@ -40,19 +40,22 @@ $res=mysqli_query($con,$sql);
 						 <thead>
 							<tr>
 							   <!-- <th class="serial">#</th> -->
+							   
 							   <th>ID</th>
 							   <th>Categories</th>
-							   <th></th>
+							   <th>image</th>
+							   <th>
 							</tr>
 						 </thead>
 						 <tbody>
 							<?php 
-							// $i=1;
+							 $i=1;
 							while($row=mysqli_fetch_assoc($res)){?>
 							<tr>
-							  <!--  <td class="serial"><?php echo $i?></td> -->
+							   
 							   <td><?php echo $row['id']?></td>
 							   <td><?php echo $row['categories']?></td>
+							   <td><img src="images/<?php echo $row['subject_image']?>"/></td>
 							   <td>
 								<?php
 								if($row['status']==1){
@@ -77,6 +80,10 @@ $res=mysqli_query($con,$sql);
 	   </div>
 	</div>
 </div>
+
+
+
+
 <?php
 require('footer_inc.php');
 ?>

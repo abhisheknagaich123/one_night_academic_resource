@@ -21,10 +21,11 @@ require('function.php');
       <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
       <link rel="stylesheet" href="assets/css/style.css">
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+      
    </head>
    <body>
       <aside id="left-panel" class="left-panel">
-         <nav class="navbar navbar-expand-sm navbar-default">
+         <nav class="navbar navbar-expand-sm navbar-default" >
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                <ul class="nav navbar-nav">
                   <li class="menu-title">Menu</li>
@@ -32,10 +33,13 @@ require('function.php');
                      <a href="categories.php" > Subject Categories Master</a>
                   </li>
                   <li class="menu-item-has-children dropdown">
-                     <a href="product.php" > Add Subject Data </a>
+                     <a href="Subject_Info.php" > Add Subject Data </a>
                   </li>
                   <li class="menu-item-has-children dropdown">
                      <a href="User.php" > User Data</a>
+                  </li>
+                  <li class="menu-item-has-children dropdown">
+                     <a href="AddSubjectCategories.php" > Add Subjects</a>
                   </li>
               
               
