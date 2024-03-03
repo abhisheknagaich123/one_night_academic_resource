@@ -1,10 +1,55 @@
 <?php
 require('connection.php');
 require('function.php');
+if (isset($_SESSION['user_id'])) {
+    //  echo "Welcome, User ID: <br>" . $_SESSION['user_id'];
+    //  // Add your logged-in user content here
+    //        echo '<br><a href="logout.php">Logout</a>';
+} else {
+    echo "";
+    echo "<script>alert('Please Login With username or password.');
+     location.href='registration.php';</script>";
+
+}
 if (isset($_GET['type']) && $_GET['type'] != '') {
     $type = get_safe_value($con, $_GET['type']);
-    $id = get_safe_value($con, $_GET['id']);
+
+
+    // if($type=='status'){
+    // 	$operation=get_safe_value($con,$_GET['operation']);
+    // 	$id=get_safe_value($con,$_GET['id']);
+    // 	if($operation=='active'){
+    // 		$status='1';
+    // 	}else{
+    // 		$status='0';
+    // 	}
+    // 	$update_status_sql="update categories set status='$status' where id='$id'";
+    // 	mysqli_query($con,$update_status_sql);
+    // }
+    // if($type=='delete'){
+    // 	$id=get_safe_value($con,$_GET['id']);
+    // 	$delete_sql="delete from subject_info where id='$id'";
+    // 	mysqli_query($con,$delete_sql);
+    // }
+
+    if ($type == 'delete') {
+        $id = get_safe_value($con, $_GET['id']);
+        $delete_sql = "DELETE FROM subject_info WHERE id='$id'";
+
+        if (mysqli_query($con, $delete_sql)) {
+            // Record deleted successfully, show modal
+            header('Location: Subject_Info.php');
+
+        } else {
+            // Handle the case when the delete query fails
+            echo '<div class="alert alert-danger">Error deleting record: ' . mysqli_error($con) . '</div>';
+        }
+    }
+
+
+
     if ($type == 'info') {
+        $id = get_safe_value($con, $_GET['id']);
 
         $id; // Check if the ID is being captured correctly
 
@@ -15,8 +60,6 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
         WHERE subject_info.categories_id = '$id' 
         ORDER BY subject_info.id DESC";
         $res = mysqli_query($con, $sql);
-
-
 
     }
 }
@@ -34,7 +77,7 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="Stylee.css">
-    <title>Hello, world!</title>
+    <title>ONAR Admin</title>
 </head>
 
 <body>
@@ -50,12 +93,16 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
                 <article class="postcard dark blue">
 
                     <div class="postcard__text">
-                        <h1 class="postcard__title blue"><a href="#">
-                                <?php echo $row['heading'] ?>
-                            </a></h1>
+                        <h1 class="postcard__title blue">
+                            <?php echo $row['heading'] ?>
+                        </h1>
                         <div class="postcard__subtitle small">
                             <time datetime="2020-05-25 12:00:00">
-                                <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <?php
+                                echo (new DateTime($row['date']))->format('D, M jS Y');
+                                ?>
+
                             </time>
                         </div>
                         <div class="postcard__bar"></div>
@@ -64,14 +111,16 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
                         </div>
                         <ul class="postcard__tagbox">
 
-                        <li class="tag__item">
-    <?php echo "<span class='fas fa-tag mr-2 badge badge-danger'><a href='?type=delete&id=" . $row['id'] . "'>Delete</a></span>"; ?>
-</li>
-<li class="tag__item">
-    <?php echo "<span class='fas fa-tag mr-2 badge badge-waring'><a href='?type=delete&id=" . $row['id'] . "'>Edit</a></span>"; ?>
-</li>
+                            <li class="tag__item">
+                                <?php echo "<span class='fas fa-tag mr-2 badge badge-danger'><a href='?type=delete&id=" . $row['id'] . "'>Delete</a></span>"; ?>
+                            </li>
+                            <li class="tag__item">
+                                <?php echo "<span class='fas fa-tag mr-2 badge badge-warning'><a href='updatedata.php?type=update&id=" . $row['id'] . "'>Edit</a></span>"; ?>
+                            </li>
 
-                           
+
+
+
                         </ul>
                     </div>
                 </article>

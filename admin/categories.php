@@ -49,7 +49,7 @@ $res=mysqli_query($con,$sql);
 						 </thead>
 						 <tbody>
 							<?php 
-							 $i=1;
+							//  $i=1;
 							while($row=mysqli_fetch_assoc($res)){?>
 							<tr>
 							   

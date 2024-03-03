@@ -7,7 +7,7 @@
                 <li data-target="#header-carousel" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active" style="min-height: 300px;">
+                <div class="carousel-item active" style="min-height: 100px;">
                     <img class="position-relative w-100" src="img/carousel-1.jpg"
                         style="min-height: 300px; object-fit: cover;">
                     <div class="carousel-caption d-flex align-items-center justify-content-center">
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="min-height: 300px;">
+                <div class="carousel-item" style="min-height: 100px;">
                     <img class="position-relative w-100" src="img/carousel-2.jpg"
                         style="min-height: 300px; object-fit: cover;">
                     <div class="carousel-caption d-flex align-items-center justify-content-center">
@@ -29,7 +29,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" style="min-height: 300px;">
+                <div class="carousel-item" style="min-height: 100px;">
                     <img class="position-relative w-100" src="img/carousel-3.jpg"
                         style="min-height: 300px; object-fit: cover;">
                     <div class="carousel-caption d-flex align-items-center justify-content-center">

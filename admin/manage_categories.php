@@ -18,9 +18,9 @@ if(isset($_POST['submit'])){
 		 $folder = 'images/'.$file_name;
 	 
 		 if(move_uploaded_file($tempname, $folder)) {
-			 echo "<h2>File uploaded successfully</h2>";
+			// echo "<h2>File uploaded successfully</h2>";
 		 } else {
-			 echo "<h2>File not uploaded successfully</h2>";
+			 //echo "<h2>File not uploaded successfully</h2>";
 		 } 
 
 		     mysqli_query($con,"insert into categories(categories,status,subject_image) values('$categories','1','$file_name')");
