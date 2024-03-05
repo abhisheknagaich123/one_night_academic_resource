@@ -27,7 +27,7 @@ if (isset($_SESSION['user_id'])) {
             $_SESSION['user_id'] = $row['username'];
             $_SESSION['start'] = time();  
             // Destroying session after 1 minute 
-            $_SESSION['expire'] = $_SESSION['start'] + (24* 60 * 60) ; 
+            $_SESSION['expire'] = $_SESSION['start'] + (24*60 * 60) ; 
            echo "<script>location.href='index.php';</script>";
             // Add your logged-in user content here
         } else {

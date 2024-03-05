@@ -4,8 +4,7 @@ require('connection.php');
 $sql = "select * from categories where status=1 order by categories asc";
 $res = mysqli_query($con, $sql);
 
-// $sql = "select subject_info.*,categories.categories from subject_info,categories where subject_info.categories_id=categories.id order by subject_info.id desc";
-// $res = mysqli_query($con, $sql);
+
 
 ?>
 
@@ -14,7 +13,9 @@ $res = mysqli_query($con, $sql);
 
 <head>
     <meta charset="utf-8">
-    <title>one_night_academic_resource</title>
+    
+    <title>ONAR</title>
+      <link rel="icon" type="image/x-icon" href="admin/favicon_io/favicon-16x16.png">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -109,10 +110,7 @@ $res = mysqli_query($con, $sql);
 
 
     <!-- Registration Start -->
-    <?php
-    require('Regpage.php');
-
-    ?>
+   
     <!-- Registration End -->
 
 

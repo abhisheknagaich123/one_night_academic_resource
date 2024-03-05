@@ -29,6 +29,7 @@ if($now > $_SESSION['expire']) {
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>ONAR Admin</title>
+      <link rel="icon" type="image/x-icon" href="favicon_io/favicon-16x16.png">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="assets/css/normalize.css">
       <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -38,7 +39,7 @@ if($now > $_SESSION['expire']) {
       <link rel="stylesheet" href="assets/css/flag-icon.min.css">
       <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
       <link rel="stylesheet" href="assets/css/style.css">
-      <link rel="icon" type="image/x-icon" href="favicon_io/favicon-16x16.png">
+      
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- <meta http-equiv="refresh" content="10">  -->

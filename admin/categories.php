@@ -22,7 +22,7 @@ if(isset($_GET['type']) && $_GET['type']!=''){
 	}
 }
 
-$sql="select * from categories order by categories asc";
+$sql="select * from categories order by categories DESC";
 $res=mysqli_query($con,$sql);
 ?>
 <div class="content pb-0">
