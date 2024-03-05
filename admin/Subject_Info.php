@@ -38,7 +38,7 @@ $res = mysqli_query($con, $sql);
 					<div class="card-body">
 						<form method="get" action="data.php">
 							<h4 class="box-title">Subject </h4>
-							<h4 class="box-link"><a href="manage_subject_data.php">Add Subject</a> </h4>
+							<h4 class="box-link"><a href="manage_subject_data.php">Add Subject data</a> </h4>
 					</div>
 					<div class="card-body--">
 						<div class="table-stats order-table ov-h">

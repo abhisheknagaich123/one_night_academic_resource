@@ -20,7 +20,7 @@ if (isset($_SESSION['user_id'])) {
       <div class="col-xl-12">
        <div class="card">
         <div class="card-body">
-           <h4 class="box-title"><?php  echo "Welcome 🤝" . $_SESSION['user_id'];?> </h4>
+           <h4 class="box-title"><?php  echo "Welcome To One Night Academic recourse Admin Portal 🤝" . $_SESSION['user_id'];?> </h4>
         </div>
       </div>
       </div>

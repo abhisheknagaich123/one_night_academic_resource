@@ -60,9 +60,17 @@ if (isset($_POST['submit'])) {
 								<label for="categories" class=" form-control-label" >Subject Description</label>
 
 							</div>
-							<textarea  name="description" placeholder="Enter the Description"  rows="4" cols="50">
+							<textarea name="description" id="description" placeholder="Enter the Description" rows="6" cols="100" onclick="moveCursorToStart()">
+</textarea>
 
-							  </textarea>
+<script>
+    function moveCursorToStart() {
+        var textarea = document.getElementById("description");
+
+        // Set the selection to the start of the textarea
+        textarea.setSelectionRange(0, 0);
+    }
+</script>
 
 
 							<button id="payment-button" name="submit" type="submit"

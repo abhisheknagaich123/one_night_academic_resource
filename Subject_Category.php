@@ -11,12 +11,13 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="cat-item position-relative overflow-hidden rounded mb-2">
                         <img id="midsize"class="object-fit-contain border rounded" class="img-fluid" src="admin/images/<?php echo $row['subject_image'] ?>" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
-                            <h4 class="text-white font-weight-medium">
-                                <?php echo $row['categories'] ?>
-                            </h4>
-                            <span>100 Courses</span>
-                        </a>
+                        <a class="cat-overlay text-white text-decoration-none" href="subjectdata.php?type=infodata&id=<?php echo $row['id']; ?>" target="_blank">
+    <h4 class="text-white font-weight-medium">
+        <?php echo $row['categories']; ?>
+    </h4>
+    <span>100 Courses</span>
+</a>
+
                     </div>
                 </div>
 

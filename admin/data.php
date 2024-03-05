@@ -14,24 +14,6 @@ if (isset($_SESSION['user_id'])) {
 if (isset($_GET['type']) && $_GET['type'] != '') {
     $type = get_safe_value($con, $_GET['type']);
 
-
-    // if($type=='status'){
-    // 	$operation=get_safe_value($con,$_GET['operation']);
-    // 	$id=get_safe_value($con,$_GET['id']);
-    // 	if($operation=='active'){
-    // 		$status='1';
-    // 	}else{
-    // 		$status='0';
-    // 	}
-    // 	$update_status_sql="update categories set status='$status' where id='$id'";
-    // 	mysqli_query($con,$update_status_sql);
-    // }
-    // if($type=='delete'){
-    // 	$id=get_safe_value($con,$_GET['id']);
-    // 	$delete_sql="delete from subject_info where id='$id'";
-    // 	mysqli_query($con,$delete_sql);
-    // }
-
     if ($type == 'delete') {
         $id = get_safe_value($con, $_GET['id']);
         $delete_sql = "DELETE FROM subject_info WHERE id='$id'";
@@ -77,6 +59,8 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="Stylee.css">
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon-16x16.png">
+
     <title>ONAR Admin</title>
 </head>
 
@@ -86,9 +70,9 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
     while ($row = mysqli_fetch_assoc($res)) { ?>
         <section class="dark">
             <div class="container py-4">
-                <h1 class="h1 text-center" id="pageHeaderTitle">
+                <h5 class="text-center" >
                     <?php echo $row['categories'] ?>
-                </h1>
+                </h5>              
 
                 <article class="postcard dark blue">
 
