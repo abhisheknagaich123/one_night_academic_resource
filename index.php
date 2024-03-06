@@ -13,9 +13,9 @@ $res = mysqli_query($con, $sql);
 
 <head>
     <meta charset="utf-8">
-    
+
     <title>ONAR</title>
-      <link rel="icon" type="image/x-icon" href="admin/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="admin/favicon_io/favicon-16x16.png">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -48,12 +48,99 @@ $res = mysqli_query($con, $sql);
             height: 200px;
 
         }
+
+        body {
+            background-color: #FFEBEE
+        }
+
+        .card {
+            width: 700px;
+            border: none;
+            border-radius: 14px !important
+        }
+
+        .area1 {
+            background-color: ;
+            border-top-left-radius: 14px !important;
+            border-top-right-radius: 14px !important;
+            padding-top: 83px !important
+        }
+
+        .image {
+            top: -62px;
+            position: relative
+        }
+
+        .image img {
+            box-shadow: 5px 6px 6px 2px #e9ecef
+        }
+
+        .area2 {
+            background-color: ;
+            border-bottom-left-radius: 14px !important;
+            border-bottom-right-radius: 14px !important
+        }
+
+        .name {
+            font-size: 25px;
+            font-weight: 650
+        }
+
+        .information {
+            color: ;
+            font-weight: 500;
+            font-size: 18px
+        }
+
+        .list-icons {
+            display: inline-flex;
+            color: #C5CAE9
+        }
+
+        .list-icons li {
+            list-style: none;
+            padding: 12px;
+            border-radius: 10px;
+            width: 49px;
+            margin-right: 10px
+        }
+
+        .list-icons li i {
+            font-size: 17px;
+            color: #fff
+        }
+
+        @media (max-width:700px) {
+            .list-icons {
+                display: block
+            }
+        }
+
+        .facebook {
+            background: #3b5998
+        }
+
+        .instagram {
+            background: #3f729b
+        }
+
+        .youtube {
+            background: #ff0000
+        }
+
+        .whatsapp {
+            background: #4dc247
+        }
+
+        .pinterest {
+            background: #cb2027
+        }
     </style>
 </head>
 
 <body>
     <!-- Topbar Start -->
-   
+
 
     <!-- Navbar Start -->
     <?php
@@ -83,12 +170,12 @@ $res = mysqli_query($con, $sql);
                         <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">About Us</h5>
                         <h1>Innovative Way To Learn</h1>
                     </div>
-                    <p>Aliquyam accusam clita nonumy ipsum sit sea clita ipsum clita, ipsum dolores amet voluptua duo
-                        dolores et sit ipsum rebum, sadipscing et erat eirmod diam kasd labore clita est. Diam sanctus
-                        gubergren sit rebum clita amet, sea est sea vero sed et. Sadipscing labore tempor at sit dolor
-                        clita consetetur dam. Diambx vbbvdfh ut diam tempor no et, lorem dolore invidunt no nonumy stet ea
-                        labore, dolor justo et sit gubergren diam sed sed no ipsum. Sit tempor ut nonumy elitr dolores
-                        justo aliquyam ipsum stet</p>
+                    <p>
+                        Our innovative website strives to support students facing last-minute exam preparations by
+                        providing a dynamic and efficient learning platform. Tailored to cater to the urgency of
+                        studying on the night before exams, our website employs a user-friendly interface and a curated
+                        repository of essential questions. This approach ensures that students can engage in focused and
+                        effective learning, optimizing their study sessions for improved exam performance</p>
                     <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn More</a>
                 </div>
             </div>
@@ -109,13 +196,13 @@ $res = mysqli_query($con, $sql);
 
 
     <!-- Registration Start -->
-   
+
     <!-- Registration End -->
 
 
     <!-- Team Start -->
     <?php
-    require('Team.php');
+    require('Founder.php');
 
     ?>
     <!-- Team End -->

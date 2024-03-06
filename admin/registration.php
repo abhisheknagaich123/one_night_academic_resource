@@ -42,7 +42,8 @@ if (isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>ONAR Admin</title>
+      <link rel="icon" type="image/x-icon" href="favicon_io/favicon-16x16.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300">
     <link rel="stylesheet" href="regstyle.css">
     
