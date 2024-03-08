@@ -11,6 +11,8 @@ add subject information
 ![image](https://github.com/abhisheknagaich123/one_night_academic_resource/assets/77282305/ef342d74-083b-4a51-b118-d901a4b2d711)
 ![image](https://github.com/abhisheknagaich123/one_night_academic_resource/assets/77282305/cddc6700-c2c3-479e-899c-3d9379fd6b17)
 ![image](https://github.com/abhisheknagaich123/one_night_academic_resource/assets/77282305/85efdbe7-6416-48d3-baa2-3b0db98efc60)
+![image](https://github.com/abhisheknagaich123/one_night_academic_resource/assets/77282305/4cf569a1-d8af-4605-b159-0a9e81a9e25e)
+
 ![image](https://github.com/abhisheknagaich123/one_night_academic_resource/assets/77282305/a40dbd3e-9106-41ec-b029-1c5f105e5658)
 ![image](https://github.com/abhisheknagaich123/one_night_academic_resource/assets/77282305/1789440d-6fdc-4a38-a2e0-e9752f729aed)
 
